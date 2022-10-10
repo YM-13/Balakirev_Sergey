@@ -53,5 +53,3 @@ print(id('cherry'))
 
 # x.pop(id('banana'))
 # print(x)
-
-print(2 + 2)
