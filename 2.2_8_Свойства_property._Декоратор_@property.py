@@ -45,11 +45,6 @@ class DecisionTree:
 				node.right = obj
 		return obj
 
-	# left - флаг, определяющий ветвь дерева (объекта node), к которой присоединяется объект obj (True - к левой ветви; False - к правой)"""
-
-	@classmethod
-	def next_o(cls, obj):
-			return obj.left != None and obj.right != None
 
 	@classmethod
 	def get_next(cls, obj, x):

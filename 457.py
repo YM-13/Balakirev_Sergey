@@ -68,4 +68,17 @@
 # p.old = 10
 # print(p.__dict__)
 
+#
+# def h(c):
+# 	m_n = float("-inf")
+#
+# 	for num in c:
+# 		if num > m_n:
+# 			m_n = num
+# 	print(m_n)
+# h([1,2,3,4,5,6,7,8,90, 6])
 
+m = float("-inf")
+m += 1
+print(type(m))
+print(m)
