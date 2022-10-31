@@ -25,13 +25,4 @@ class Cell:
 
 
 class TableSheet:
-	pass
 
-a = str(input())
-a = a.replace(" ", "\'", 1)
-a = a.replace(" ", "\"", 4)
-# a = a.split()
-#
-# print(a[0] + "\'" + a[1] + "\"" + a[2] + "\"" + a[3] + "\"" + a[4])
-a.r
-print(a)
