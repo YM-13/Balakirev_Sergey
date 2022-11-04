@@ -1,5 +1,9 @@
 class Product:
 
+	# _id_instance = 1
+	# def __init__(self, name, weight, price):
+	# 	self.id = Product._id_instance
+	# 	Product._id_instance += 1
 	id = 0
 	__instance = None
 
@@ -11,11 +15,10 @@ class Product:
 
 	attrs = {'id': (int, ), 'name': (str, ), 'weight': (int, float), 'price': (int, float)}
 
-	def __init__(self,  name, weight, price):
+	def __init__(self, name, weight, price):
 		self.name = name      # str
 		self.weight = weight  # int float
 		self.price = price    # int float
-
 
 	def __setattr__(self, key, value):
 		if key in self.attrs and type(value) in self.attrs[key]:
