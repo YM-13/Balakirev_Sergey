@@ -1,3 +1,4 @@
+""""""
 class HandlerGET:
 	def __init__(self, func):
 		self.__f = func
@@ -12,9 +13,6 @@ class HandlerGET:
 
 	def get(self, func, request, *args, **kwargs):
 		return f"GET: {func(request)}"
-
-
-
 
 
 @HandlerGET

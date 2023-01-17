@@ -12,14 +12,12 @@ class Handler:
 		return wrapper
 
 
-
 	def get(self, func, request, *args, **kwargs):
 		return f'GET: {func(request)}'
 
 
 	def post(self, func, request, *args, **kwargs):
 		return f'POST: {func(request)}'
-
 
 
 @Handler(methods=('GET', 'POST')) # по умолчанию methods = ('GET',)
