@@ -1,14 +1,14 @@
 
 ###############################
-# def fuct(n):
-# 	if n <= 0:
-# 		return 1
-# 	else:
-# 		return n * fuct(n-1)
-#
-#
-# p = fuct(6)
-# print(p)
+def fuct(n):
+	if n <= 0:
+		return 1
+	else:
+		return n * fuct(n-1)
+
+
+p = fuct(6)
+print(p)
 
 ################################ ПЕРЕБОР КАТАЛОГОВ И ФАЙЛОВ
 
