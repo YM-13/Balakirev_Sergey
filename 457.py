@@ -774,7 +774,6 @@ import task
 # print(l)
 
 
-
 # print([i for _ in range(int(input())) for i in input()])
 #
 #
@@ -840,7 +839,7 @@ import task
 # print(*l_positive, sep="\n")
 
 
-#s = input().split()
+# s = input().split()
 # print(*(input().split()), sep="\n")
 
 
@@ -849,13 +848,12 @@ import task
 # 	print(i[0] + ".", end=""
 
 
-#s = input().split("\\")
+# s = input().split("\\")
 # [print(i) for i in input().split("\\")]
 
 
-#l = [int(i) for i in input().split()]
+# l = [int(i) for i in input().split()]
 # [print("+" * k) for k in [int(i) for i in input().split()]]
-
 
 
 # l = [int(i) for i in input().split(".")]
@@ -877,7 +875,6 @@ import task
 # print(input().join(s))
 
 
-
 # l = [int(i) for i in input().split()]
 # count = 0
 # for k in l:
@@ -896,7 +893,6 @@ import task
 # 			sum += j
 # 		count += sum
 # print(count)
-
 
 
 # numbers = [8, 9, 10, 11]
@@ -924,7 +920,7 @@ import task
 #     "and were enjoyed both by the common people of London and also by the rich and famous. In addition to his plays," \
 #     "Shakespeare wrote many short poems and a few longer poems. Like his plays, these poems are still famous today."
 # s = s.lower().split()
-#a = 0
+# a = 0
 # an = 0
 # the = 0
 
@@ -959,4 +955,491 @@ import task
 # [print(i ** 2) for i in range(1, int(input()) + 1)]
 
 
-print(*[(i ** 2) for i in range(1, int(input()) + 1)])
+# [print(i, end="") for i in input() if i.isdigit()]
+
+
+# [print(k ** 2, end=" ") for k in [int(i) for i in input().split()] if k % 2 == 0 and k ** 2 % 10 != 4]
+
+
+# a = [17, 24, 91, 96, 67, -27, 79, -71, -71, 58, 48, 88, 88, -16, -78, 96, -76, 56, 92, 1, 32, -17, 36, 88, -61, -97,
+#      -37, -84, 50, 47, 94, -6, 52, -76, 93, 14, -32, 98, -65, -16, -9, -68, -20, -40, -71, 93, -91, 44, 25, 79, 97, 0,
+#      -94, 7, -47, -96, -55, -58, -78, -78, -79, 75, 44, -56, -41, 38, 16, 70, 17, -17, -24, -83, -74, -73, 11, -26, 63,
+#      -75, -19, -13, -51, -74, 21, -8, 21, -68, -66, -84, -95, 78, 69, -29, 39, 38, -55, 7, -11, -26, -62, -84]
+#
+# n = len(a)
+# flag = True
+# total_iter = 0
+# while flag:
+#     flag = False
+#     for j in range(n - total_iter - 1):
+#         if a[j] > a[j + 1]:
+#             a[j], a[j + 1] = a[j + 1], a[j]
+#             flag = True
+#     total_iter += 1
+#
+# print(a)
+
+
+# a = [78, -32, 5, 39, 58, -5, -63, 57, 72, 9, 53, -1, 63, -97, -21, -94, -47, 57, -8, 60, -23, -72, -22, -79, 90, 96,
+#      -41, -71, -48, 84, 89, -96, 41, -16, 94, -60, -64, -39, 60, -14, -62, -19, -3, 32, 98, 14, 43, 3, -56, 71, -71,
+#      -67, 80, 27, 92, 92, -64, 0, -77, 2, -26, 41, 3, -31, 48, 39, 20, -30, 35, 32, -58, 2, 63, 64, 66, 62, 82, -62, 9,
+#      -52, 35, -61, 87, 78, 93, -42, 87, -72, -10, -36, 61, -16, 59, 59, 22, -24, -67, 76, -94, 59]
+#
+# n = len(a)
+# count = 0
+# # реализация алгоритма сортировки выбором
+# for i in range(0, n - 1):
+#     max_num = a[0]
+#     for j in range(0, n - 1 - count):
+#         if a[j + 1] > max_num:
+#             max_num = a[j + 1]
+#     count += 1
+#     a[-count], a[a.index(max_num)] = max_num, a[-count]
+#
+# print(a)
+
+
+# a = [78, -32, 5, 39, 58, -5, -63, 57, 72, 9, 53, -1, 63, -97, -21, -94, -47, 57, -8, 60, -23, -72, -22, -79, 90, 96,
+#      -41, -71, -48, 84, 89, -96, 41, -16, 94, -60, -64, -39, 60, -14, -62, -19, -3, 32, 98, 14, 43, 3, -56, 71, -71,
+#      -67, 80, 27, 92, 92, -64, 0, -77, 2, -26, 41, 3, -31, 48, 39, 20, -30, 35, 32, -58, 2, 63, 64, 66, 62, 82, -62, 9,
+#      -52, 35, -61, 87, 78, 93, -42, 87, -72, -10, -36, 61, -16, 59, 59, 22, -24, -67, 76, -94, 59]
+
+# n = len(a)
+#
+# # реализация алгоритма сортировки выбором
+# while n:
+#     i_max = a.index(max(a[:n]))
+#     a[n - 1], a [i_max] = a[i_max], a[n - 1]
+#     n -= 1
+# print(a)
+
+
+# numbers = list(range(1, 10, 2))
+# for i in numbers:
+#     print(i, end='*')
+
+
+# print(list(range(2, int(input()) + 1, 2)))
+
+
+# L = [int(i) for i in input().split()]
+# M = [int(i) for i in input().split()]
+#
+# [print(x + y, end=' ') for x, y in zip(L, M) ]
+
+
+# nums_str = input().split()
+# nums_sum = sum([int(i) for i in nums_str])
+# [print(k, end="+") for k in nums_str[:-1]]
+# print(f'{nums_str[-1]}={nums_sum}')
+
+
+# s = input().split('-')
+# l = ["7", 3, 3, 4]
+# flag = "NO"
+# if len(s) == 4 and (s[0] + s[1] + s[2] + s[3]).isdigit() and s[0] == "7":
+#     for i in range(1, 4):
+#         if len(s[i]) == l[i]:
+#             flag = "YES"
+#         else:
+#             flag = "NO"
+#             break
+# elif len(s) == 3 and (s[0] + s[1] + s[2]).isdigit():
+#     for i in range(1, 4):
+#         if len(s[i - 1]) == l[i]:
+#             flag = "YES"
+#         else:
+#             flag = "NO"
+#             break
+#
+# print(flag)
+
+
+# print(max([len(k) for k in input().split()]))
+
+
+# print(*[k[1:] + k[0] + "ки" for k in input().split()])
+
+
+# def draw_triangle():
+#     for k in range(1, 11):
+#         print("*" * k)
+#
+# # основная программа
+# draw_triangle()
+
+
+# объявление функции
+# def print_digit_sum(num):
+#     num = str(num)
+#     print(sum([int(num[i]) for i in range(len(num))]))
+#
+# # считываем данные
+# n = int(input())
+#
+# # вызываем функцию
+# print_digit_sum(n)
+
+
+# def is_prime(num):
+#     num += 1
+#     flag = 1
+#     while flag:
+#         flag = 0
+#         for i in range(2, num // 2 + 1):
+#             if num % i == 0:
+#                 num += 1
+#                 flag += 1
+#                 break
+#     return num
+#
+# # считываем данные
+# n = int(input())
+#
+# # вызываем функцию
+# print(is_prime(n))
+
+
+# from string import ascii_uppercase, ascii_lowercase, digits
+#
+# def is_password_good(password):
+#     if len(password) < 8:
+#         return False
+#     d = digits
+#     dd = 0
+#     a = ascii_lowercase
+#     aa = 0
+#     A = ascii_uppercase
+#     AA = 0
+#     for i in password:
+#         if i in d:
+#             dd += 1
+#         elif i in a:
+#             aa += 1
+#         elif i in A:
+#             AA += 1
+#     return all([dd, aa, AA])
+#
+# print(is_password_good("abC1pu"))
+
+
+# def is_one_away(word1, word2):
+#     len_word1 = len(word1)
+#
+#     if len_word1 != len(word2):
+#         return False
+#
+#     count = 0
+#     for i in range(len_word1):
+#         if word1[i] != word2[i]:
+#             count += 1
+#
+#     if count == 1:
+#         return True
+#     return False
+
+
+# def is_palindrome(text: str):
+# 	for i in text:
+# 		if i in (",.!?- "):
+# 			text = text.lower().replace(i, "")
+# 	if text == text[::-1]:
+# 		return True
+# 	return False
+#
+# for k in ["Standart - smallest, sell Amstrad nats", "Zoo belt to be Russia, is sure bottle booz.",
+#           "Evil fit some killlike me, kill like most, if live.", "Do me?.. Kill I victim? Must summit civil like mod.",
+# 	"Карман, жена, но Какашкин - вор! О, Ковалева... Вела во коровник. Ша! Как она нежна! рак...",
+# 	      "Зело полз Антипарх то вино пить - тип он и вот храпит - на зло полез",
+# 	      "Марс близ Овна. На базар генерал в ларе негра за банан возил б. Срам!",
+# 	      "Тер жен, а нес токмо радение о бодром мордобое, и недаром кот сена не жрет.",
+# 	      "Тер жен, а нес токмо недаром кот сена не жрет.",
+# 	      "sjdflksjflksdjflsdjk sdlfhsdjfE#R#$$#R !!!!! sdjfnsdjkfnsd kjcvadsk"]:
+# 	print(is_palindrome(k))
+
+
+# def is_valid_password(password: str):
+# 	if password.count(":") != 2:
+# 		return False
+#
+# 	password = password.split(":")
+# 	if password[0] != password[0][::-1]:
+# 		return False
+#
+# 	n = int(password[1])
+# 	if [i for i in range(2, n) if n % i == 0]:
+# 		return False
+#
+# 	if int(password[2]) % 2 != 0:
+# 		return False
+#
+# 	return True
+
+
+# def is_correct_bracket(text):
+#     while '()' in text:
+#         text = text.replace('()', '')
+#     return len(text) == 0
+#
+# # считываем данные
+# txt = input()
+#
+# # вызываем функцию
+# print(is_correct_bracket(txt))
+
+
+# def convert_to_python_case(text): # MyMethodThatDoSomething
+# 	l = []
+# 	i_1 = 0
+# 	for i in range(1, len(text)): # индекс символа
+# 		if text[i] == text[i].upper() and text[i].isalpha():
+# 			l.append(text[i_1:i])
+# 			i_1 = i
+# 	l.append(text[i_1:])
+# 	return "_".join(l).lower()
+#
+# # считываем данные
+#
+#
+# txt = input()
+#
+# # вызываем функцию
+# print(convert_to_python_case(txt))
+
+
+# def get_middle_point(x1, y1, x2, y2):
+# 	return f'{(x2 + x1) / 2}, {(y2 + y1) / 2}'
+#
+# print(get_middle_point(0, 0, 10, 0))
+# print(get_middle_point(1, 5, 8, 3))
+
+
+# from math import pi
+# def get_circle(radius):
+# 	c = 2 * pi * radius
+# 	s = pi * radius ** 2
+# 	return c, s
+
+# def solve(a, b, c):
+# 	D = (b ** 2 - 4 * a * c) ** 0.5
+# 	A = 2 * a
+# 	x1 = (-b + D) / A
+# 	x2 = (-b - D) / A
+# 	return x2, x1
+#
+# #print(solve(1, -4, -5))
+# print(solve(-2, 7, -5))
+# print(solve(1, 2, 1))
+
+
+# %% %% %% %% %% %% %% %% %% %% %% %% %% %% %% %% %% %%
+
+# def draw_triangle():
+# 	[print([" " * (7 - k) + i * "*" for i in range(1, 16, 2)][k]) for k in range(8)]
+#
+# draw_triangle()
+
+
+# def get_shipping_cost(quantity):
+#     return 1000 + 120 * (quantity - 1)
+#
+# # считываем данные
+# n = int(input())
+#
+# # вызываем функцию
+# print(get_shipping_cost(n))
+
+
+# def factorial(n):
+# 	mult = 1
+# 	for i in range(1, n + 1):
+# 		mult *= i
+# 	return mult
+# def compute_binom(n, k):
+# 	f_n = factorial(n)
+# 	f_k = factorial(k)
+# 	f_n_k = factorial(n - k)
+# 	res = int(f_n / (f_k * f_n_k))
+# 	return res
+#
+# # считываем данные
+# n = int(input())
+# k = int(input())
+#
+# # вызываем функцию
+# print(compute_binom(n, k))
+
+
+# l = [0, 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять', 'десять', 'одиннадцать', 'двенадцать',
+#      'тринадцать', 'четырнадцать', 'пятнадцать', 'шестнадцать', 'семнадцать', 'восемнадцать', 'девятнадцать',
+#      'двадцать', 0, 0, 0, 0, 0, 0, 0, 0, 0,
+#      'тридцать', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'сорок', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'пятьдесят', 0, 0, 0, 0, 0, 0, 0, 0, 0,
+#      'шестьдесят', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'семьдесят', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'восемьдесят', 0, 0, 0, 0, 0, 0,
+#      0, 0, 0, 'девяносто']
+#
+#
+# def number_to_words(num):
+# 	if num < 21:
+# 		return l[num]
+# 	elif num % 10 == 0:
+# 		return l[num]
+# 	else:
+# 		return l[num - num % 10] + " " + l[num % 10]
+
+# считываем данные
+
+#
+# n = int(input())
+#
+# # вызываем функцию
+# print(number_to_words(n))
+
+
+# объявление функции
+# def is_magic(date):
+# 	date = date.split(".")
+# 	if int(date[0]) * int(date[1]) == int(date[2][2:]):
+# 		return True
+# 	else:
+# 		return False
+#
+#
+# # считываем данные
+# date = input()
+#
+# # вызываем функцию
+# print(is_magic(date))
+
+
+# from string import ascii_lowercase
+# def is_pangram(text):
+# 	for j in ascii_lowercase:
+# 		if j not in text.lower():
+# 			return False
+# 	return True
+#
+# # считываем данные
+# text = "Jackdaws love my big sphinx of quartz" #input()
+#
+# # вызываем функцию
+# print(is_pangram(text))
+
+
+from random import randint
+
+# def is_valid(s: str):
+# 	return s.isdigit() and 1 <= int(s) <= 100
+
+# def guess_num():
+# 	print('Добро пожаловать в числовую угадайку')
+# 	p = int(input('Укажите правую границу диапазона случайного выбора числа для отгадывания: '))
+# 	n = randint(1, p)
+# 	count = 0
+# 	while True:
+# 		num = input(f"Введите число от 1 до {p} включительно: ")
+# 		count += 1
+# 		if not is_valid(num):
+# 			print(f'А может быть все-таки введем целое число от 1 до {p}?')
+# 			continue
+# 		num = int(num)
+# 		if n == num:
+# 			print(f"Вы угадали, поздравляем! Попыток было {count}")
+# 			print('Спасибо, что играли в числовую угадайку. Еще увидимся...')
+# 			guess_num()
+# 		elif num > n:
+# 			print('Ваше число больше загаданного, попробуйте еще разок')
+# 		elif num < n:
+# 			print('Ваше число меньше загаданного, попробуйте еще разок')
+#
+# guess_num()
+
+
+
+# from math import log2, ceil
+# def guess_min_questions(n):
+# 	res = log2(n)
+# 	# return int(res + (0.5 if res > 0 else -0.5))
+# 	return ceil(res)
+# n = int(input())
+# print(guess_min_questions(n))
+
+
+
+###   Магический шар 8   ###
+# from random import choice
+#
+# answers = ["Бесспорно", "Предрешено", "Никаких сомнений", "Определённо да","Можешь быть уверен в этом",
+#            "Мне кажется - да", "Вероятнее всего", "Хорошие перспективы", "Знаки говорят - да", "Да",
+#            "Пока неясно, попробуй снова", "Спроси позже", "Лучше не рассказывать", "Сейчас нельзя предсказать",
+#            "Сконцентрируйся и спроси опять", "Даже не думай", "Мой ответ - нет", "По моим данным - нет",
+#            "Перспективы не очень хорошие", "Весьма сомнительно"]
+#
+# def game():
+# 	print('Привет Мир, я магический шар, и я знаю ответ на любой твой вопрос.')
+# 	name = input('Как вас зовут?: ')
+# 	print(f'Привет {name}')
+# 	flag = True
+# 	while flag:
+# 		question = input('Задайте вопрос: ')
+# 		print(choice(answers))
+# 		q2 = input('Хотите ли вы задать еще один выпрос? ("ДА" "НЕТ"): ').upper()
+# 		if q2 == "НЕТ":
+# 			flag = False
+# 			game()
+# game()
+
+
+######  Генератор безопасных паролей
+
+## digits = '0123456789'
+## lowercase_letters = 'abcdefghijklmnopqrstuvwxyz'
+## uppercase_letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+## punctuation = '!#$%&*+-=?@^_'
+##
+## dig = input('Включать ли цифры в пароль ("ДА" или "НЕТ"): ')
+## lo_letters = input('Включать ли прописные буквы в пароль ("ДА" или "НЕТ"): ')
+## up_letters = input('Включать ли строчные буквы в пароль ("ДА" или "НЕТ"): ')
+## simbols = input('Включать ли символы в пароль ("ДА" или "НЕТ"): ')
+##
+## two_mean_simb = input('Исключать ли неоднозначные символы в пароль ("ДА" или "НЕТ"): ')
+
+# from random import choice
+#
+# def generate_password(length, chars):
+# 	password = ''
+# 	for j in range(length):
+# 		password += choice(chars)
+# 	return password
+#
+# def create_safty_passwords():
+# 	signs = ['0123456789', 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '!#$%&*+-=?@^_']
+# 	signs_not_ink = 'il1Lo0O'
+#
+# 	chars = ''
+#
+# 	n = int(input('Введите количество паролей для генерации: '))
+# 	length = int(input('Введите длину одного пароля: '))
+#
+# 	questions = [input('Включать ли цифры в пароль ("ДА" или "НЕТ"): '),
+# 	             input('Включать ли прописные буквы в пароль ("ДА" или "НЕТ"): '),
+# 	             input('Включать ли строчные буквы в пароль ("ДА" или "НЕТ"): '),
+# 	             input('Включать ли символы в пароль ("ДА" или "НЕТ"): ')]
+# 	flag = True if input('Исключать ли неоднозначные символы в пароль ("ДА" или "НЕТ"): ') == 'ДА' else False
+#
+# 	for i in range(4):
+# 		if questions[i] == 'ДА' and not flag:
+# 			chars += signs[i]
+# 		else:
+# 			for k in signs[i]:
+# 				if k not in signs_not_ink:
+# 					chars += k
+#
+# 	for _ in range(n):
+# 		print(generate_password(length, chars))
+#
+# create_safty_passwords()
+
+
+
+
+
